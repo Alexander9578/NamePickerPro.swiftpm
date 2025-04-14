@@ -11,7 +11,7 @@ struct ContentView: View {
                 Text("NAME PICKER")
                     .font(.largeTitle)
                     .bold()
-                    .background(.yellow)
+                    .background(.purple)
                 Text("PRO")
                     .background(.red)
                     .font(.largeTitle)
