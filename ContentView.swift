@@ -4,18 +4,26 @@ struct ContentView: View {
     var body: some View {
         ZStack{
             
-        
+            
             Color .cyan
-            HStack {
+            
+            VStack{
+                HStack {
+                    
+                    Text("NAME PICKER")
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundStyle(.white)
+                    Text("PRO")
+                        .foregroundStyle(.white)
+                        .font(.largeTitle)
+                        .bold()
+                    
+                    
+                }
                 
-                Text("NAME PICKER")
-                    .font(.largeTitle)
-                    .bold()
-                    .foregroundStyle(.white)
-                Text("PRO")
-                    .foregroundStyle(.white)
-                    .font(.largeTitle)
-                    .bold()
+
+            
                
                 NavigationLink(destination: PlayView()){
                     Text("Play")
@@ -24,6 +32,7 @@ struct ContentView: View {
                         .foregroundStyle(.white)
                 }
                 .navigationTitle("Start")
+
             }
             
         }
