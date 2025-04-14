@@ -16,7 +16,16 @@ struct ContentView: View {
                     .foregroundStyle(.white)
                     .font(.largeTitle)
                     .bold()
+               
+                NavigationLink(destination: PlayView()){
+                    Text("Play")
+                        .font(.title)
+                        .padding()
+                        .foregroundStyle(.white)
+                }
+                .navigationTitle("Start")
             }
+            
         }
     }
 }
