@@ -13,14 +13,13 @@ struct ContentView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .foregroundStyle(.blue)
                                 .frame(width: 375, height: 50);
-                           
+                            
                             Text("NAME PICKER PRO ")
                                 .font(.largeTitle)
                                 .bold()
                                 .foregroundStyle(.white)
                         }
                     }
-                    
                     NavigationLink(destination: PlayView()){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
@@ -33,29 +32,29 @@ struct ContentView: View {
                                 .foregroundStyle(.white)
                         }
                     }
-//                    .navigationTitle("Start")
                     //                    .navigationTitle("Start")
-                    
-                    Rectangle()
-                        .offset(y: 240)
-                        .frame(width: 390,height: 150)
-                        .foregroundStyle(.gray)
-                    Text("ONE Time Offer !!")
-                        .bold()
-                        .foregroundStyle(.black)
-                        .offset(x:30,y:90)
-                        .font(.title2)
-                    Text("Claim your Nitendo Switch 3  for only        1 cents !! ")
-                        .bold()
-                        .foregroundStyle(.red)
-                        .offset(x:10,y:120)
-                        .font(.title2)
-                    Link("CLAIM", destination: URL(string: "https://www.temu.com")!)
-                            .bold()
-                            .foregroundStyle(.yellow)
-                            .offset(x:10,y:95)
-                            .font(.largeTitle)
-                    
+                    //                    .navigationTitle("Start")
+                    ZStack{
+                        Rectangle()
+                            .frame(width: 390,height: 150)
+                            .foregroundStyle(.gray)
+                        VStack{
+                            Text("ONE Time Offer !!")
+                                .bold()
+                                .foregroundStyle(.black)
+                                .font(.title2)
+                            Text("Claim your Nitendo Switch 3  for only        1 cents !! ")
+                                .bold()
+                                .foregroundStyle(.red)
+                                .font(.title2)
+                            Link("CLAIM", destination: URL(string: "https://www.temu.com")!)
+                                .bold()
+                                .foregroundStyle(.yellow)
+                                .font(.largeTitle)
+                        }
+                        .offset(x: 12)
+                    }
+                    .offset(y: 180)
                 }
             }
         }
