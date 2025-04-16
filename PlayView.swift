@@ -23,6 +23,8 @@ struct PlayView: View {
                     Text(names[name])
                         .foregroundStyle(.white)
                         .bold()
+                        .font(.title2)
+                     
                 }
                 TextField("Enter Name", text: $name)
                     .onSubmit {
