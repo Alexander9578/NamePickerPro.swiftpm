@@ -9,22 +9,16 @@ struct ContentView: View {
                 
                 VStack{
                     HStack {
-
-                        
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .foregroundStyle(.blue)
                                 .frame(width: 375, height: 50);
-                                
-                                
                            
                             Text("NAME PICKER PRO ")
                                 .font(.largeTitle)
                                 .bold()
                                 .foregroundStyle(.white)
                         }
-        
-                        
                     }
                     
                     NavigationLink(destination: PlayView()){

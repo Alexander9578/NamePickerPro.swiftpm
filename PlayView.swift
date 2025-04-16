@@ -35,27 +35,27 @@ struct PlayView: View {
                         }
                     }
                 
-                .textFieldStyle(.roundedBorder)
-                .multilineTextAlignment(.center)
-                .frame(width: 200)
-                .padding()
-                Button("Choose Random Name") {
+                    .textFieldStyle(.roundedBorder)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 200)
+                    .padding()
+                Button{
                     if names.isEmpty {
                         showName = false
-                            
+                        
                     } else {
                         showName = true
                         chosenNum = Int.random(in: 0..<names.count)
-                           
+                    }
+                } label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 5)
+                            .frame(width: 200, height: 40)
+                            .foregroundStyle(.blue)
+                        Text("Choose Random Name")
+                            .foregroundStyle(.white)
                     }
                 }
-                .foregroundStyle(.white)
-                .background(
-RoundedRectangle(cornerRadius: 5)
-    .fill(Color.gray)
-                
-                )
-                
                 .padding()
                 if showName == true {
                     Text("Chosen Name: \(names[chosenNum])")
@@ -63,7 +63,7 @@ RoundedRectangle(cornerRadius: 5)
                         .font(.largeTitle)
                         .bold()
                         .foregroundStyle(.white)
-                        
+                    
                 }
             }
         }
