@@ -33,16 +33,22 @@ struct ContentView: View {
                         }
                     }
                     //                    .navigationTitle("Start")
-                    //                    .navigationTitle("Start")
                     ZStack{
                         Rectangle()
                             .frame(width: 390,height: 150)
                             .foregroundStyle(.gray)
                         VStack{
-                            Text("ONE Time Offer !!")
-                                .bold()
-                                .foregroundStyle(.black)
-                                .font(.title2)
+                            HStack{
+                                Image("temu")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                    .offset(x: -80, y: 8)
+                                Text("ONE Time Offer !!")
+                                    .bold()
+                                    .foregroundStyle(.black)
+                                    .font(.title2)
+                                    .offset(x: -30)
+                            }
                             Text("Claim your Nitendo Switch 3  for only        1 cents !! ")
                                 .bold()
                                 .foregroundStyle(.red)
@@ -51,6 +57,7 @@ struct ContentView: View {
                                 .bold()
                                 .foregroundStyle(.yellow)
                                 .font(.largeTitle)
+                            
                         }
                         .offset(x: 12)
                     }
