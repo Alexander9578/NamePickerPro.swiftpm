@@ -24,7 +24,7 @@ struct PlayView: View {
                         .foregroundStyle(.white)
                         .bold()
                 }
-                TextField("Name", text: $name)
+                TextField("Enter Name", text: $name)
                     .onSubmit {
                         if name.isEmpty {
                         } else {
@@ -32,6 +32,7 @@ struct PlayView: View {
                             name = ""
                         }
                     }
+                
                 .textFieldStyle(.roundedBorder)
                 .multilineTextAlignment(.center)
                 .frame(width: 200)
@@ -52,8 +53,15 @@ RoundedRectangle(cornerRadius: 5)
     .fill(Color.gray)
                 
                 )
+                
+                .padding()
                 if showName == true {
                     Text("Chosen Name: \(names[chosenNum])")
+                        .foregroundStyle(.blue)
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundStyle(.white)
+                        
                 }
             }
         }
