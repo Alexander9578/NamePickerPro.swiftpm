@@ -16,7 +16,6 @@ struct PlayView: View {
                     //            Text("\(name + 1). \(names[name])")
                     Text(names[name])
                 }
-                
                 TextField("Name", text: $name)
                     .onSubmit {
                         if name.isEmpty {
@@ -25,7 +24,10 @@ struct PlayView: View {
                             name = ""
                         }
                     }
-                
+                .textFieldStyle(.roundedBorder)
+                .multilineTextAlignment(.center)
+                .frame(width: 200)
+                .padding()
                 Button("Choose Random Name") {
                     if names.isEmpty {
                         showName = false
