@@ -55,7 +55,7 @@ struct ContentView: View {
                             .foregroundStyle(.yellow)
                             .offset(x:10,y:95)
                             .font(.largeTitle)
-                    Image("File 3")
+                    
                 }
             }
         }
