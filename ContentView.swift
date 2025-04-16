@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var bgColor = Color.cyan
     var body: some View {
         NavigationStack{
             ZStack{
