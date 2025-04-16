@@ -9,21 +9,35 @@ struct ContentView: View {
                 
                 VStack{
                     HStack {
-                        Text("NAME PICKER")
-                            .font(.largeTitle)
-                            .bold()
-                            .foregroundStyle(.white)
-                        Text("PRO")
-                            .foregroundStyle(.white)
-                            .font(.largeTitle)
-                            .bold()
+
+                        
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundStyle(.blue)
+                                .frame(width: 375, height: 50);
+                                
+                                
+                           
+                            Text("NAME PICKER PRO ")
+                                .font(.largeTitle)
+                                .bold()
+                                .foregroundStyle(.white)
+                        }
+        
+                        
                     }
                     
                     NavigationLink(destination: PlayView()){
-                        Text("Start")
-                            .font(.title)
-                            .padding()
-                            .foregroundStyle(.white)
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundStyle(.blue)
+                                .frame(width: 100, height: 50);
+                            Text("Start")
+                                .bold()
+                                .font(.title)
+                                .padding()
+                                .foregroundStyle(.white)
+                        }
                     }
 //                    .navigationTitle("Start")
                 }
