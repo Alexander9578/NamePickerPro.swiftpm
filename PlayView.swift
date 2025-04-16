@@ -11,6 +11,9 @@ struct PlayView: View {
                 .ignoresSafeArea()
             
             VStack{
+                
+                
+                Text("")
                 Text("Names:")
                 ForEach(names.indices, id: \.self) { name in
                     //            Text("\(name + 1). \(names[name])")
@@ -31,12 +34,19 @@ struct PlayView: View {
                 Button("Choose Random Name") {
                     if names.isEmpty {
                         showName = false
+                            
                     } else {
                         showName = true
                         chosenNum = Int.random(in: 0..<names.count)
+                           
                     }
                 }
+                .foregroundStyle(.white)
+                .background(
+RoundedRectangle(cornerRadius: 5)
+    .fill(Color.blue)
                 
+                )
                 if showName == true {
                     Text("Chosen Name: \(names[chosenNum])")
                 }
