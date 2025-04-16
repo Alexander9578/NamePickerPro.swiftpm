@@ -15,9 +15,14 @@ struct PlayView: View {
                 
                 Text("")
                 Text("Names:")
+                    .foregroundStyle(.black)
+                    .bold()
+                    .font(.largeTitle)
                 ForEach(names.indices, id: \.self) { name in
                     //            Text("\(name + 1). \(names[name])")
                     Text(names[name])
+                        .foregroundStyle(.white)
+                        .bold()
                 }
                 TextField("Name", text: $name)
                     .onSubmit {
@@ -44,7 +49,7 @@ struct PlayView: View {
                 .foregroundStyle(.white)
                 .background(
 RoundedRectangle(cornerRadius: 5)
-    .fill(Color.blue)
+    .fill(Color.gray)
                 
                 )
                 if showName == true {
