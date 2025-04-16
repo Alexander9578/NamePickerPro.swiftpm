@@ -18,14 +18,17 @@ struct PlayView: View {
                     .foregroundStyle(.black)
                     .bold()
                     .font(.largeTitle)
-                ForEach(names.indices, id: \.self) { name in
-                    //            Text("\(name + 1). \(names[name])")
-                    Text(names[name])
-                        .foregroundStyle(.white)
-                        .bold()
-                        .font(.title2)
-                     
+                List{
+                    ForEach(names.indices, id: \.self) { name in
+                        //            Text("\(name + 1). \(names[name])")
+                        Text(names[name])
+                            .foregroundStyle(.black)
+                            .bold()
+                            .font(.title2)
+                    }
+                    .onDelete {IndexSet in names.remove(atOffsets: IndexSet)}
                 }
+                .frame(height: 200)
                 TextField("Enter Name", text: $name)
                     .onSubmit {
                         if name.isEmpty {
