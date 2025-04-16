@@ -59,7 +59,23 @@ struct PlayView: View {
                             .foregroundStyle(.white)
                     }
                 }
-                .padding()
+                
+                Button {
+                                  names.removeAll()
+                                  name = ""
+                                  showName = false
+                              } label: {
+                                  ZStack{
+                                      RoundedRectangle(cornerRadius: 5)
+                                          .frame(width: 200, height: 40)
+                                          .foregroundColor(.red)
+                                      Text("Reset")
+                                          .foregroundStyle(.white)
+                                          .bold()
+                                  }
+                              }
+                           
+             
                 if showName == true {
                     Text("Chosen Name: \(names[chosenNum])")
                         .foregroundStyle(.blue)
