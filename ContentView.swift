@@ -34,6 +34,21 @@ struct ContentView: View {
                     }
                     //                    .navigationTitle("Start")
                     //                    .navigationTitle("Start")
+                    NavigationLink(destination: SettingsView()){
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundStyle(.blue)
+                                .frame(width: 120, height: 50);
+                            Text("Settings")
+                                .bold()
+                                .font(.title)
+                                .padding()
+                                .foregroundStyle(.white)
+                        }
+                    }
+                    
+                    
+                    
                     ZStack{
                         Rectangle()
                             .frame(width: 390,height: 150)
