@@ -2,12 +2,16 @@ import SwiftUI
 
 struct SettingsView: View {
     @State private var bgColor =
-            Color(.sRGB, red: 0.98, green: 0.9, blue: 0.2)
+            Color(.sRGB, red: 0.90, green: 0.9, blue: 0.2)
 
     var body: some View {
         ZStack{
-            Color.cyan
-                .ignoresSafeArea()
+            if #available(iOS 17.0, *) {
+                Color(bgColor)
+                    .ignoresSafeArea()
+            } else {
+                // Fallback on earlier versions
+            }
             VStack{
                 Text("App Settings")
                     .font(.largeTitle)
@@ -23,6 +27,7 @@ struct SettingsView: View {
                     .bold()
                     .foregroundStyle(.white)
                     .font(.title)
+                    
             }
         }
     }
