@@ -6,29 +6,39 @@ struct PlayView: View {
     @State var chosenNum: Int = 0
     @State var showName: Bool = false
     var body: some View {
-        Text("Names:")
-        ForEach(names.indices, id: \.self) { name in
-//            Text("\(name + 1). \(names[name])")
-            Text(names[name])
-        }
-        TextField("Name", text: $name)
-            .onSubmit {
-                if name.isEmpty {
-                } else {
-                    names.append(name)
-                    name = ""
+        ZStack{
+            Color.cyan
+                .ignoresSafeArea()
+            
+            VStack{
+                Text("Names:")
+                ForEach(names.indices, id: \.self) { name in
+                    //            Text("\(name + 1). \(names[name])")
+                    Text(names[name])
+                }
+                
+                TextField("Name", text: $name)
+                    .onSubmit {
+                        if name.isEmpty {
+                        } else {
+                            names.append(name)
+                            name = ""
+                        }
+                    }
+                
+                Button("Choose Random Name") {
+                    if names.isEmpty {
+                        showName = false
+                    } else {
+                        showName = true
+                        chosenNum = Int.random(in: 0..<names.count)
+                    }
+                }
+                
+                if showName == true {
+                    Text("Chosen Name: \(names[chosenNum])")
                 }
             }
-        Button("Choose Random Name") {
-            if names.isEmpty {
-                showName = false
-            } else {
-                showName = true
-                chosenNum = Int.random(in: 0..<names.count)
-            }
-        }
-        if showName == true {
-            Text("Chosen Name: \(names[chosenNum])")
         }
     }
 }

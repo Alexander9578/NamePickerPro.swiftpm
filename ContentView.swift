@@ -5,6 +5,8 @@ struct ContentView: View {
         NavigationStack{
             ZStack{
                 Color.cyan
+                    .ignoresSafeArea()
+                
                 VStack{
                     HStack {
                         Text("NAME PICKER")
