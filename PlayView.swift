@@ -5,10 +5,17 @@ struct PlayView: View {
     @State var name: String = ""
     @State var chosenNum: Int = 0
     @State var showName: Bool = false
+    @State var bgColor =
+    Color(.sRGB, red: 135/255, green: 206/255, blue: 235/255 )
     var body: some View {
         ZStack{
-            Color.cyan
-                .ignoresSafeArea()
+//            Color.cyan
+            if #available(iOS 17.0, *) {
+                Color(bgColor)
+                    .ignoresSafeArea()
+            } else {
+                // Fallback on earlier versions
+            }
             
             VStack{
                 
@@ -84,7 +91,10 @@ struct PlayView: View {
                                   }
                               }
                            
-             
+                ColorPicker("Choose Color", selection: $bgColor)
+                    .bold()
+                    .foregroundStyle(.white)
+                    .font(.title)
                 if showName == true {
                     Text("Chosen Name: \(names[chosenNum])")
                         .foregroundStyle(.blue)

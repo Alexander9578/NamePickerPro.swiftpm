@@ -1,9 +1,8 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var bgColor =
-            Color(.sRGB, red: 0.90, green: 0.9, blue: 0.2)
-
+    @State var bgColor =
+    Color(.sRGB, red: 135/255, green: 206/255, blue: 235/255 )
     var body: some View {
         ZStack{
             if #available(iOS 17.0, *) {

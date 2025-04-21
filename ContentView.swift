@@ -1,11 +1,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var bgColor =
+    Color(.sRGB, red: 135/255, green: 206/255, blue: 235/255 )
+        
+    
     var body: some View {
         NavigationStack{
             ZStack{
                 Color.cyan
-                    .ignoresSafeArea()
+                         if #available(iOS 17.0, *) {
+                             Color(bgColor)
+                                 .ignoresSafeArea()
+                         } else {
+                             // Fallback on earlier versions
+                         }
+                    
                 
                 VStack{
                     HStack {
@@ -44,9 +54,13 @@ struct ContentView: View {
                                 .padding()
                                 .foregroundStyle(.white)
                         }
+                   
                     }
                     
-                    
+                    ColorPicker("Choose Color", selection: $bgColor)
+                        .bold()
+                        .foregroundStyle(.white)
+                        .font(.title)
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 25)
