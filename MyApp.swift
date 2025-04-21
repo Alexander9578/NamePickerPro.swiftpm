@@ -1,7 +1,7 @@
 import SwiftUI
 
 class ThemeManager: ObservableObject {
-    @Published var themeColor: Color = .blue
+    @Published var themeColor: Color = .cyan
 }
 
 @main

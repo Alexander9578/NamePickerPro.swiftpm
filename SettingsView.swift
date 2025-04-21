@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State var bgColor =
-    Color(.sRGB, red: 135/255, green: 206/255, blue: 235/255 )
-   
+
+    @EnvironmentObject var theme: ThemeManager
+
     var body: some View {
         ZStack{
             if #available(iOS 17.0, *) {
-                Color(bgColor)
+                Color(theme.themeColor)
                     .ignoresSafeArea()
             } else {
                 // Fallback on earlier versions
@@ -23,7 +23,7 @@ struct SettingsView: View {
                     .foregroundStyle(.white)
                     .font(.title)
                 
-                ColorPicker("Choose Color", selection: $bgColor)
+                ColorPicker("Choose Color", selection: $theme.themeColor)
                     .bold()
                     .foregroundStyle(.white)
                     .font(.title)
