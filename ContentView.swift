@@ -4,15 +4,12 @@ struct ContentView: View {
     @State var bgColor =
     Color(.sRGB, red: 135/255, green: 206/255, blue: 235/255 )
         
+    @State var bgColor = Color.cyan
     var body: some View {
         NavigationStack{
             ZStack{
-                if #available(iOS 17.0, *) {
-                    Color(bgColor)
-                        .ignoresSafeArea()
-                } else {
-                    // Fallback on earlier versions
-                }
+                Color.cyan
+                    .ignoresSafeArea()
                 
                 VStack{
                     HStack {
