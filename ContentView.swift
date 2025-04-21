@@ -4,12 +4,18 @@ struct ContentView: View {
     @State var bgColor =
     Color(.sRGB, red: 135/255, green: 206/255, blue: 235/255 )
         
-    @State var bgColor = Color.cyan
+    
     var body: some View {
         NavigationStack{
             ZStack{
                 Color.cyan
-                    .ignoresSafeArea()
+                         if #available(iOS 17.0, *) {
+                             Color(bgColor)
+                                 .ignoresSafeArea()
+                         } else {
+                             // Fallback on earlier versions
+                         }
+                    
                 
                 VStack{
                     HStack {
@@ -57,30 +63,45 @@ struct ContentView: View {
                         .font(.title)
                     
                     ZStack{
-                        Rectangle()
+                        RoundedRectangle(cornerRadius: 25)
                             .frame(width: 390,height: 150)
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.white)
                         VStack{
                             HStack{
                                 Image("temu")
                                     .resizable()
-                                    .frame(width: 50, height: 50)
+                                    .frame(width: 60, height:60)
                                     .offset(x: -80, y: 8)
-                                Text("ONE Time Offer !!")
+                                
+                                Text("ONE TIME OFFER ")
                                     .bold()
-                                    .foregroundStyle(.black)
+                                    .foregroundStyle(.orange)
                                     .font(.title2)
-                                    .offset(x: -30)
-                            }
-                            Text("Claim your Nitendo Switch 3  for only        1 cents !! ")
-                                .bold()
-                                .foregroundStyle(.red)
-                                .font(.title2)
-                            Link("CLAIM", destination: URL(string: "https://www.temu.com")!)
-                                .bold()
-                                .foregroundStyle(.yellow)
-                                .font(.largeTitle)
+                                    .offset(x: -35)
+                                    .font(.largeTitle)
                             
+                                    .padding(-1)
+                                
+                            }
+                            Text("Claim free items today!")
+                            
+                            Text("Invite friends to the app")
+                            
+                                .bold()
+                                .foregroundStyle(.black)
+                                .font(.title2)
+                            
+                            ZStack{
+                                
+                                RoundedRectangle(cornerRadius: 20)
+                                    .frame(width: 200, height: 50)
+                                    .foregroundStyle(.gray)
+                                Link("CLAIM", destination: URL(string: "https://www.temu.com")!)
+                                    .bold()
+                                    .foregroundStyle(.white)
+                                    .font(.largeTitle)
+                                
+                            }
                         }
                         .offset(x: 12)
                     }
