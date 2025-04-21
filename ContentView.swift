@@ -13,7 +13,7 @@ struct ContentView: View {
                              Color(bgColor)
                                  .ignoresSafeArea()
                          } else {
-                             // Fallback on earlier versions
+                           
                          }
                     
                 
