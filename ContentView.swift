@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var names: [String] = []
+    @State var name: String = ""
     @State var bgColor: Color = Color.cyan
     var body: some View {
         NavigationStack{
@@ -21,6 +23,8 @@ struct ContentView: View {
                         }
                     }
                     NavigationLink(destination: PlayView(
+                        names: $names,
+                        name: $name,
                         bgColor: $bgColor
                     )){
                         ZStack{

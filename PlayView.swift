@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct PlayView: View {
-    @State var names: [String] = []
-    @State var name: String = ""
+    @Binding var names: [String]
+    @Binding var name: String
     @State var chosenNum: Int = 0
     @State var showName: Bool = false
     @Binding var bgColor: Color
