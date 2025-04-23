@@ -34,20 +34,20 @@ struct ContentView: View {
                                 .foregroundStyle(.white)
                         }
                     }
-//                    NavigationLink(destination: WheelView(
-//                        bgColor: $bgColor
-//                    )){
-//                        ZStack{
-//                            RoundedRectangle(cornerRadius: 10)
-//                                .foregroundStyle(.blue)
-//                                .frame(width: 120, height: 50);
-//                            Text("Wheel")
-//                                .bold()
-//                                .font(.title)
-//                                .padding()
-//                                .foregroundStyle(.white)
-//                        }
-//                    }
+                    NavigationLink(destination: WheelView(
+                        bgColor: $bgColor
+                    )){
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundStyle(.blue)
+                                .frame(width: 120, height: 50);
+                            Text("Wheel")
+                                .bold()
+                                .font(.title)
+                                .padding()
+                                .foregroundStyle(.white)
+                        }
+                    }
                    NavigationLink(destination: SettingsView(
                         bgColor: $bgColor
                     )){
@@ -78,8 +78,6 @@ struct ContentView: View {
                         }
                         
                     }
-                    //
-                    
                     ZStack{
                         RoundedRectangle(cornerRadius: 25)
                             .frame(width: 390,height: 150)

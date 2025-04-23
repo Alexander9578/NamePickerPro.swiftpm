@@ -8,19 +8,7 @@ struct CreditView: View {
         ZStack{
             bgColor
                 .ignoresSafeArea()
-
             
-            VStack{
-                Text("Credits:")
-                    .font(.system(size: 25))
-                    .padding()
-                Text("Alexander Diaz")
-                Text("Oskar Piątek")
-                Text("Ryusei Yamada")
-                Text("Luca Fabian")
-            }
-            .foregroundStyle(.white)
-
             VStack{
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
