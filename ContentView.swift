@@ -50,7 +50,21 @@ struct ContentView: View {
                         }
                         
                     }
-                    
+                    NavigationLink(destination: CreditView(
+                        bgColor: $bgColor
+                    )){
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundStyle(.blue)
+                                .frame(width: 120, height: 50);
+                            Text("Credits")
+                                .bold()
+                                .font(.title)
+                                .padding()
+                                .foregroundStyle(.white)
+                        }
+                        
+                    }
                     //
                     
                     ZStack{
