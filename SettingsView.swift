@@ -17,7 +17,7 @@ struct SettingsView: View {
                         .foregroundStyle(.white)
                         .offset(y:-150)
                 }
-                    
+                
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(.red)
@@ -34,32 +34,15 @@ struct SettingsView: View {
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(.red)
-                        .frame(width: 200, height: 50)
-                        .offset(x:-100)
+                        .frame(width: 125, height: 50)
+                        .offset(x: -85)
                     ColorPicker("Choose Color", selection: $bgColor)
                         .bold()
-                        .foregroundStyle(.white)
-                        .offset(y:-150)
-                    
-                    VStack{
-                        
-                        Text("Change background")
-                            .offset(y: -50)
-                            .foregroundStyle(.black)
-                            .bold()
-                            
-                        
-                        ColorPicker("Color", selection: $bgColor)
-                                .bold()
-                                .foregroundStyle(.white)
-                                .font(.title)
-                                .offset(y: -50)
-                                .frame(width: 50 , height: 50)
-                                
-                        }
-                    }
+                        .foregroundStyle(.black)
                 }
+                .offset(y:-150)
+                .frame(width:275)
             }
         }
     }
-
+}
