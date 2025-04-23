@@ -8,19 +8,19 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "NamePickerPro",
+    name: "Name Picker Pro",
     platforms: [
         .iOS("16.0")
     ],
     products: [
         .iOSApplication(
-            name: "NamePickerPro",
+            name: "Name Picker Pro",
             targets: ["AppModule"],
             bundleIdentifier: "org.jhhs.628099.NamePickerPro",
             displayVersion: "1.0",
             bundleVersion: "1",
             appIcon: .asset("AppIcon"),
-            accentColor: .presetColor(.yellow),
+            accentColor: .presetColor(.blue),
             supportedDeviceFamilies: [
                 .pad,
                 .phone

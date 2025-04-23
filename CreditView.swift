@@ -9,8 +9,16 @@ struct CreditView: View {
             bgColor
                 .ignoresSafeArea()
             
-            
-            Text("You write credit here")
+            VStack{
+                Text("Credits:")
+                    .font(.system(size: 25))
+                    .padding()
+                Text("Alexander Diaz")
+                Text("Oskar Piątek")
+                Text("Ryusei Yamada")
+                Text("Luca Fabian")
+            }
+            .foregroundStyle(.white)
         }
     }
 }
