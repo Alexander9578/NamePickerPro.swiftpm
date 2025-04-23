@@ -5,20 +5,12 @@ struct PlayView: View {
     @State var name: String = ""
     @State var chosenNum: Int = 0
     @State var showName: Bool = false
-    @EnvironmentObject var theme: ThemeManager
+    @Binding var bgColor: Color
     var body: some View {
         ZStack{
-            Color.cyan
-            if #available(iOS 17.0, *) {
-                Color(theme.themeColor)
-                    .ignoresSafeArea()
-            } else {
-                // Fallback on earlier versions
-            }
-            
+            bgColor
+                .ignoresSafeArea()
             VStack{
-                
-                
                 Text("")
                 Text("Names:")
                     .foregroundStyle(.black)
@@ -76,21 +68,21 @@ struct PlayView: View {
                 }
                 
                 Button {
-                                  names.removeAll()
-                                  name = ""
-                                  showName = false
-                              } label: {
-                                  ZStack{
-                                      RoundedRectangle(cornerRadius: 5)
-                                          .frame(width: 200, height: 40)
-                                          .foregroundColor(.red)
-                                      Text("Reset")
-                                          .foregroundStyle(.white)
-                                          .bold()
-                                  }
-                              }
-                           
-              
+                    names.removeAll()
+                    name = ""
+                    showName = false
+                } label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 5)
+                            .frame(width: 200, height: 40)
+                            .foregroundColor(.red)
+                        Text("Reset")
+                            .foregroundStyle(.white)
+                            .bold()
+                    }
+                }
+                
+                
                 if showName == true {
                     Text("Chosen Name: \(names[chosenNum])")
                         .foregroundStyle(.blue)
@@ -102,8 +94,4 @@ struct PlayView: View {
             }
         }
     }
-}
-
-#Preview {
-    PlayView()
 }
