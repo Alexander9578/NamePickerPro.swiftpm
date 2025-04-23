@@ -37,7 +37,7 @@ struct SettingsView: View {
                         .foregroundStyle(.red)
                         .frame(width: 200, height: 50)
                         .offset(x:-100)
-                    ColorPicker("Choose Color", selection: $theme.themeColor)
+                    ColorPicker("Choose Color", selection: $bgColor)
                         .bold()
                         .foregroundStyle(.white)
                         .font(.title)
