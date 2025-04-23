@@ -1,21 +1,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @EnvironmentObject var theme: ThemeManager
-    
+    @State var bgColor: Color = Color.cyan
     var body: some View {
         NavigationStack{
             ZStack{
-                Color.cyan
-                         if #available(iOS 17.0, *) {
-                             Color(theme.themeColor)
-                                 .ignoresSafeArea()
-                         } else {
-                           
-                         }
-                    
-                
+                bgColor
+                    .ignoresSafeArea()
                 VStack{
                     HStack {
                         ZStack{
@@ -29,7 +20,9 @@ struct ContentView: View {
                                 .foregroundStyle(.white)
                         }
                     }
-                    NavigationLink(destination: PlayView()){
+                    NavigationLink(destination: PlayView(
+                        bgColor: $bgColor
+                    )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .foregroundStyle(.blue)
@@ -42,7 +35,9 @@ struct ContentView: View {
                         }
                     }
                     //                    .navigationTitle("Start")
-                    NavigationLink(destination: SettingsView()){
+                    NavigationLink(destination: SettingsView(
+                        bgColor: $bgColor
+                    )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .foregroundStyle(.blue)
@@ -53,10 +48,10 @@ struct ContentView: View {
                                 .padding()
                                 .foregroundStyle(.white)
                         }
-                   
+                        
                     }
                     
-//                   
+                    //
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 25)
@@ -75,7 +70,7 @@ struct ContentView: View {
                                     .font(.title2)
                                     .offset(x: -35)
                                     .font(.largeTitle)
-                            
+                                
                                     .padding(-1)
                                 
                             }

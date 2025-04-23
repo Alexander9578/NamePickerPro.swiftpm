@@ -1,17 +1,11 @@
 import SwiftUI
 
 struct SettingsView: View {
-
-    @EnvironmentObject var theme: ThemeManager
-
+    @Binding var bgColor: Color
     var body: some View {
         ZStack{
-            if #available(iOS 17.0, *) {
-                Color(theme.themeColor)
-                    .ignoresSafeArea()
-            } else {
-                // Fallback on earlier versions
-            }
+            bgColor
+                .ignoresSafeArea()
             VStack{
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
