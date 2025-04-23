@@ -34,8 +34,23 @@ struct ContentView: View {
                                 .foregroundStyle(.white)
                         }
                     }
+                    NavigationLink(destination: WheelView(
+                        bgColor: $bgColor
+                    )){
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundStyle(.blue)
+                                .frame(width: 120, height: 50);
+                            Text("Wheel")
+                                .bold()
+                                .font(.title)
+                                .padding()
+                                .foregroundStyle(.white)
+                        }
+                        
+                    }
                     //                    .navigationTitle("Start")
-                    NavigationLink(destination: SettingsView(
+                   NavigationLink(destination: SettingsView(
                         bgColor: $bgColor
                     )){
                         ZStack{
