@@ -9,7 +9,7 @@ struct SettingsView: View {
             VStack{
                 ZStack{
                     RoundedRectangle(cornerRadius: 35)
-                        .frame(width: 330, height: 250)
+                        .frame(width: 330,height: 89)
                         .foregroundStyle(.white)
                     Text("App Settings")
                         .font(.largeTitle)
@@ -19,21 +19,21 @@ struct SettingsView: View {
                 }
                 
                 ZStack{
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(.red)
-                        .frame(width: 360, height: 50)
+                    RoundedRectangle(cornerRadius: 20)
+                        .foregroundStyle(.gray)
+                        .frame(width: 300, height: 50)
                         .offset(y:-10)
                     
-                    Text("Change Background Color")
+                    Text("Background color")
                         .bold()
                         .foregroundStyle(.white)
-                        .font(.title)
+                      
                         .offset(y:-10)
                 }
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(.red)
+                        .foregroundStyle(.gray)
                         .frame(width: 125, height: 50)
                         .offset(x: -85)
                     ColorPicker("Choose Color", selection: $bgColor)
