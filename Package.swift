@@ -19,7 +19,7 @@ let package = Package(
             bundleIdentifier: "org.jhhs.628099.NamePickerPro",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .asset("AppIcon"),
+            appIcon: .placeholder(icon: .movieReel),
             accentColor: .presetColor(.yellow),
             supportedDeviceFamilies: [
                 .pad,
