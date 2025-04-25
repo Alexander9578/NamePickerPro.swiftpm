@@ -16,7 +16,7 @@ struct SettingsView: View {
                     Text("App Settings")
                         .font(.largeTitle)
                         .bold()
-                        .foregroundStyle(.white)
+                        .foregroundStyle(textColor)
                         .offset(y:-150)
                 }
                 
@@ -29,6 +29,7 @@ struct SettingsView: View {
                     Text("Background color")
                         .bold()
                         .foregroundStyle(.white)
+                        .font(.title)
                       
                         .offset(y:-10)
                 }
@@ -44,8 +45,34 @@ struct SettingsView: View {
                 }
                 .offset(y:-150)
                 .frame(width:275)
-              
-                ColorPicker("Choose Color", selection: $textColor)
+                ZStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .foregroundStyle(.gray)
+                        .frame(width: 300, height: 50)
+                        .offset(y:-10)
+                    
+                    Text("Text color")
+                        .bold()
+                        .foregroundStyle(.white)
+                        .font(.title)
+                      
+                        .offset(y:-10)
+                }
+                
+                ZStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .foregroundStyle(.white)
+                        .frame(width: 200, height: 75)
+                    ZStack{
+                        RoundedRectangle(cornerRadius:10)
+                            .foregroundStyle(.gray)
+                            .frame(width: 120, height: 50)
+                            .offset(x: -22)
+                        ColorPicker("Choose Color", selection: $textColor)
+                            .frame(width: 150 , height: 75)
+                            .bold()
+                    }
+                }
             }
         }
     }
