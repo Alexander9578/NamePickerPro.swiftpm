@@ -6,6 +6,7 @@ struct PlayView: View {
     @State var chosenNum: Int = 0
     @State var showName: Bool = false
     @Binding var bgColor: Color
+    @State var textColor: Color = Color.white
     var body: some View {
         ZStack{
             bgColor
@@ -13,13 +14,14 @@ struct PlayView: View {
             VStack{
                 Text("")
                 Text("Names:")
-                    .foregroundStyle(.black)
+                    .foregroundStyle(textColor)
                     .bold()
                     .font(.largeTitle)
                 if names.isEmpty{
                     Text("Start entering names!")
                         .font(.system(size: 20))
                         .padding()
+                        .foregroundStyle(textColor)
                 } else {
                     List{
                         ForEach(names.indices, id: \.self) { name in

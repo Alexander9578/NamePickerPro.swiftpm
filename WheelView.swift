@@ -8,6 +8,7 @@ struct WheelView: View {
     @Binding var bgColor: Color
     @State var Rotate = 0.0
     @State var viewNames: Bool = false
+    @State var textColor: Color = Color.white
     var body: some View {
         ZStack{
             bgColor
@@ -34,22 +35,26 @@ struct WheelView: View {
                                 .foregroundStyle(.white)
                         }
                         
-                        Button("Spin to Choose a Name"){
-                            if names.isEmpty {
-                                showName = false
-                            } else {
-                                showName = false
-                                Rotate += Double.random(in: 360...900)
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                                    chosenNum = Int.random(in: 0..<names.count)
-                                    showName = true
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 20)
+                                .frame(width: 300, height: 50)
+                                .foregroundStyle(.gray)
+                            Button("Spin to Choose a Name"){
+                                if names.isEmpty {
+                                    showName = false
+                                } else {
+                                    showName = false
+                                    Rotate += Double.random(in: 360...900)
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                                        chosenNum = Int.random(in: 0..<names.count)
+                                        showName = true
+                                    }
                                 }
                             }
-                            
+                            .font(.system(size: 25))
+                            .bold()
+                            .foregroundStyle(.black)
                         }
-                        .font(.largeTitle)
-                        .bold()
-                        .foregroundStyle(.black)
                         .padding()
                         .offset(y: 50)
                     }
@@ -111,6 +116,9 @@ struct WheelView: View {
                             .foregroundStyle(.white)
                             .bold()
                     }
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundStyle(.black)
                 }
             }
             .offset(y: 200)

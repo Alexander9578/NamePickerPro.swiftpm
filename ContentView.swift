@@ -4,6 +4,7 @@ struct ContentView: View {
     @State var names: [String] = []
     @State var name: String = ""
     @State var bgColor: Color = Color.cyan
+    @State var textColor: Color = Color.white
     var body: some View {
         NavigationStack{
             ZStack{
@@ -19,13 +20,13 @@ struct ContentView: View {
                             Text("NAME PICKER PRO ")
                                 .font(.largeTitle)
                                 .bold()
-                                .foregroundStyle(.white)
+                                .foregroundStyle(textColor)
                         }
                     }
                     NavigationLink(destination: PlayView(
                         names: $names,
                         name: $name,
-                        bgColor: $bgColor
+                        bgColor: $bgColor, textColor: textColor
                     )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
@@ -35,7 +36,7 @@ struct ContentView: View {
                                 .bold()
                                 .font(.title)
                                 .padding()
-                                .foregroundStyle(.white)
+                                .foregroundStyle(textColor)
                         }
                     }
                     NavigationLink(destination: WheelView(
@@ -51,12 +52,12 @@ struct ContentView: View {
                                 .bold()
                                 .font(.title)
                                 .padding()
-                                .foregroundStyle(.white)
+                                .foregroundStyle(textColor)
                         }
                     }
                    NavigationLink(destination: SettingsView(
-                        bgColor: $bgColor
-                    )){
+                    bgColor: $bgColor, textColor: $textColor
+                    ) ){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .foregroundStyle(.blue)
@@ -65,12 +66,12 @@ struct ContentView: View {
                                 .bold()
                                 .font(.title)
                                 .padding()
-                                .foregroundStyle(.white)
+                                .foregroundStyle(textColor)
                         }
                         
                     }
                     NavigationLink(destination: CreditView(
-                        bgColor: $bgColor
+                        bgColor: $bgColor, textColor: textColor
                     )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
@@ -80,7 +81,7 @@ struct ContentView: View {
                                 .bold()
                                 .font(.title)
                                 .padding()
-                                .foregroundStyle(.white)
+                                .foregroundStyle(textColor)
                         }
                     }
                     ZStack{
