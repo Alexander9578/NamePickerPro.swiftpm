@@ -16,13 +16,20 @@ struct WheelView: View {
                 .rotationEffect(.degrees(Rotate))
                 .animation(.easeInOut(duration: 3).delay(0),value: Rotate)
             VStack{
-                Button("SPIN"){
-                    Rotate += Double.random(in: 360...900)
+                
+                ZStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .frame(width: 250, height: 50)
+                        .offset(x: 0, y: 200)
+                        .foregroundStyle(.gray)
+                    Button("SPIN"){
+                        Rotate += Double.random(in: 360...900)
+                    }
+                    .font(.largeTitle)
+                    .bold()
+                    .offset(y:200)
+                    .foregroundStyle(.black)
                 }
-                .font(.largeTitle)
-                .bold()
-                .offset(y:200)
-                .foregroundStyle(.black)
             }
         }
     }
