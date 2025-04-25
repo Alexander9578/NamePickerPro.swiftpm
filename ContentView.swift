@@ -26,7 +26,7 @@ struct ContentView: View {
                     NavigationLink(destination: PlayView(
                         names: $names,
                         name: $name,
-                        bgColor: $bgColor
+                        bgColor: $bgColor, textColor: textColor
                     )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
@@ -69,7 +69,7 @@ struct ContentView: View {
                         
                     }
                     NavigationLink(destination: CreditView(
-                        bgColor: $bgColor
+                        bgColor: $bgColor, textColor: textColor
                     )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)

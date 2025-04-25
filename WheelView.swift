@@ -3,6 +3,7 @@ import SwiftUI
 struct WheelView: View {
     @Binding var bgColor: Color
     @State var Rotate = 0.0
+    @State var textColor: Color = Color.white
     var body: some View {
         ZStack{
             bgColor
