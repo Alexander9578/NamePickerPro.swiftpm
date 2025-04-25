@@ -24,7 +24,7 @@ struct WheelView: View {
                         .offset(x: 0, y: 200)
                         .foregroundStyle(.gray)
                     Button("SPIN"){
-                        Rotate += Double.random(in: 360...900)
+                        Rotate += Double.random(in: 900...9000)
                     }
                     .font(.largeTitle)
                     .bold()
