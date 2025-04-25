@@ -44,6 +44,7 @@ struct SettingsView: View {
                 }
                 .offset(y:-150)
                 .frame(width:275)
+              
                 ColorPicker("Choose Color", selection: $textColor)
             }
         }

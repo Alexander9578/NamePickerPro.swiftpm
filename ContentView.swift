@@ -20,7 +20,7 @@ struct ContentView: View {
                             Text("NAME PICKER PRO ")
                                 .font(.largeTitle)
                                 .bold()
-                                .foregroundStyle(.white)
+                                .foregroundStyle(textColor)
                         }
                     }
                     NavigationLink(destination: PlayView(
@@ -36,7 +36,7 @@ struct ContentView: View {
                                 .bold()
                                 .font(.title)
                                 .padding()
-                                .foregroundStyle(.white)
+                                .foregroundStyle(textColor)
                         }
                     }
                     NavigationLink(destination: WheelView(
@@ -50,7 +50,7 @@ struct ContentView: View {
                                 .bold()
                                 .font(.title)
                                 .padding()
-                                .foregroundStyle(.white)
+                                .foregroundStyle(textColor)
                         }
                     }
                    NavigationLink(destination: SettingsView(
@@ -64,7 +64,7 @@ struct ContentView: View {
                                 .bold()
                                 .font(.title)
                                 .padding()
-                                .foregroundStyle(.white)
+                                .foregroundStyle(textColor)
                         }
                         
                     }
@@ -79,7 +79,7 @@ struct ContentView: View {
                                 .bold()
                                 .font(.title)
                                 .padding()
-                                .foregroundStyle(.white)
+                                .foregroundStyle(textColor)
                         }
                         
                     }
