@@ -2,6 +2,7 @@ import SwiftUI
 
 struct WheelView: View {
     @Binding var bgColor: Color
+    @State var Rotate = 0.0
     var body: some View {
         ZStack{
             bgColor
@@ -12,7 +13,17 @@ struct WheelView: View {
             Image(systemName: "arrow.up")
                 .frame(width: 600,height: 150)
                 .scaleEffect(6)
-            
+                .rotationEffect(.degrees(Rotate))
+                .animation(.easeInOut(duration: 3).delay(1),value: Rotate)
+            VStack{
+                Button("SPIN"){
+                    Rotate += Double.random(in: 360...900)
+                }
+                .font(.largeTitle)
+                .bold()
+                .offset(y:200)
+                .foregroundStyle(.black)
+            }
         }
     }
 }
