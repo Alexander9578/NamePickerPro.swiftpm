@@ -39,6 +39,8 @@ struct ContentView: View {
                         }
                     }
                     NavigationLink(destination: WheelView(
+                        names: $names,
+                        name: $name,
                         bgColor: $bgColor
                     )){
                         ZStack{
@@ -80,7 +82,6 @@ struct ContentView: View {
                                 .padding()
                                 .foregroundStyle(.white)
                         }
-                        
                     }
                     ZStack{
                         RoundedRectangle(cornerRadius: 25)
@@ -90,8 +91,8 @@ struct ContentView: View {
                             HStack{
                                 Image("temu")
                                     .resizable()
-                                    .frame(width: 60, height:60)
-                                    .offset(x: -80, y: 8)
+                                    .frame(width: 70, height:70)
+                                    .offset(x: -75, y: 25)
                                 
                                 Text("ONE TIME OFFER ")
                                     .bold()

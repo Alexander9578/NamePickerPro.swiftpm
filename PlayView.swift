@@ -89,7 +89,6 @@ struct PlayView: View {
                         .font(.largeTitle)
                         .bold()
                         .foregroundStyle(.white)
-                    
                 }
             }
         }
