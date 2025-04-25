@@ -2,6 +2,8 @@ import SwiftUI
 
 struct SettingsView: View {
     @Binding var bgColor: Color
+    
+    @Binding var textColor: Color
     var body: some View {
         ZStack{
             bgColor
@@ -42,6 +44,7 @@ struct SettingsView: View {
                 }
                 .offset(y:-150)
                 .frame(width:275)
+                ColorPicker("Choose Color", selection: $textColor)
             }
         }
     }
