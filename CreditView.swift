@@ -23,58 +23,72 @@ struct CreditView: View {
                         .font(.largeTitle)
                         .offset(y:-10)
                 }
+                    NavigationLink(destination: SettingsView(
+                        bgColor: $bgColor, textColor: $textColor
+                    ) ){
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundStyle(.blue)
+                                .frame(width: 120, height: 50);
+                            Text("Settings")
+                                .bold()
+                                .font(.title)
+                                .padding()
+                                .foregroundStyle(textColor)
+                        }
+                        
+                    }
+                    NavigationLink(destination: SettingsView(
+                        bgColor: $bgColor, textColor: $textColor
+                    ) ){
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundStyle(.blue)
+                                .frame(width: 120, height: 50);
+                            Text("Settings")
+                                .bold()
+                                .font(.title)
+                                .padding()
+                                .foregroundStyle(textColor)
+                        }
+                        
+                    }
+                    
+                    
+                    NavigationLink(destination: SettingsView(
+                        bgColor: $bgColor, textColor: $textColor
+                    ) ){
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundStyle(.blue)
+                                .frame(width: 120, height: 50);
+                            Text("Settings")
+                                .bold()
+                                .font(.title)
+                                .padding()
+                                .foregroundStyle(textColor)
+                        }
+                        
+                    }
+                    
+                NavigationLink(destination: SettingsView(
+                    bgColor: $bgColor, textColor: $textColor
+                ) ){
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundStyle(.blue)
+                            .frame(width: 120, height: 50);
+                        Text("Settings")
+                            .bold()
+                            .font(.title)
+                            .padding()
+                            .foregroundStyle(textColor)
+                    }
+                    
+                }
                 
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(.blue)
-                        .frame(width: 300, height: 50)
-                        .offset(y:-10)
-                    Text("Ryusei Yamada")
-                        .bold()
-                        .foregroundStyle(textColor)
-                        .font(.title)
-                        .offset(y:-10)
-                }
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(.blue)
-                        .frame(width: 300, height: 50)
-                        .offset(y:-10)
-                    Text("Oskar Piątek")
-                        .bold()
-                        .foregroundStyle(textColor)
-                        .font(.title)
-                        .offset(y:-10)
-                }
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(.blue)
-                        .frame(width: 300, height: 50)
-                        .offset(y:-10)
-                    Text("Luca Fabian")
-                        .bold()
-                        .foregroundStyle(textColor)
-                        .font(.title)
-                        .offset(y:-10)
-                
-                }
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(.blue)
-                        .frame(width: 300, height: 50)
-                        .offset(y:-10)
-                    Text("Alexander Diaz")
-                        .bold()
-                        .foregroundStyle(textColor)
-                        .font(.title)
-                        .offset(y:-10)
-                
-                }
+               }
             }
         }
     }
-}
-
-
-
 
