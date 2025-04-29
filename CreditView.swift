@@ -70,7 +70,6 @@ struct CreditView: View {
                         }
                         
                     }
-                    
                 NavigationLink(destination: SettingsView(
                     bgColor: $bgColor, textColor: $textColor
                 ) ){
@@ -86,9 +85,10 @@ struct CreditView: View {
                     }
                     
                 }
+                }
                 
                }
             }
         }
-    }
+    
 
