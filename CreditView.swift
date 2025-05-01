@@ -23,14 +23,14 @@ struct CreditView: View {
                         .font(.largeTitle)
                         .offset(y:-10)
                 }
-                    NavigationLink(destination: SettingsView(
-                        bgColor: $bgColor, textColor: $textColor
+                NavigationLink(destination: AlexView(
+                        bgColor: $bgColor // , textColor: $textColor
                     ) ){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .foregroundStyle(.blue)
                                 .frame(width: 120, height: 50);
-                            Text("Settings")
+                            Text("Alex Diaz")
                                 .bold()
                                 .font(.title)
                                 .padding()
@@ -38,14 +38,14 @@ struct CreditView: View {
                         }
                         
                     }
-                    NavigationLink(destination: SettingsView(
-                        bgColor: $bgColor, textColor: $textColor
+                NavigationLink(destination: LucaView(
+                        bgColor: $bgColor // , textColor: $textColor
                     ) ){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .foregroundStyle(.blue)
                                 .frame(width: 120, height: 50);
-                            Text("Settings")
+                            Text("Luca Fabian")
                                 .bold()
                                 .font(.title)
                                 .padding()
@@ -55,14 +55,14 @@ struct CreditView: View {
                     }
                     
                     
-                    NavigationLink(destination: SettingsView(
-                        bgColor: $bgColor, textColor: $textColor
+                NavigationLink(destination: OskarView(
+                        bgColor: $bgColor // , textColor: $textColor
                     ) ){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .foregroundStyle(.blue)
                                 .frame(width: 120, height: 50);
-                            Text("Settings")
+                            Text("Oskar Piątek")
                                 .bold()
                                 .font(.title)
                                 .padding()
@@ -70,14 +70,14 @@ struct CreditView: View {
                         }
                         
                     }
-                NavigationLink(destination: SettingsView(
-                    bgColor: $bgColor, textColor: $textColor
+                NavigationLink(destination: RyuseiView(
+                    bgColor: $bgColor // , textColor: $textColor
                 ) ){
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(.blue)
                             .frame(width: 120, height: 50);
-                        Text("Settings")
+                        Text("Ryusei Yamada")
                             .bold()
                             .font(.title)
                             .padding()
