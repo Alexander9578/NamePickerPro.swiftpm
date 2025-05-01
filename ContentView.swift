@@ -23,32 +23,17 @@ struct ContentView: View {
                                 .foregroundStyle(textColor)
                         }
                     }
-                    NavigationLink(destination: PlayView(
+                    NavigationLink(destination: StartView(
                         names: $names,
                         name: $name,
-                        bgColor: $bgColor, textColor: textColor
+                        bgColor: $bgColor,
+                        textColor: $textColor
                     )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .foregroundStyle(.blue)
                                 .frame(width: 100, height: 50);
                             Text("Start")
-                                .bold()
-                                .font(.title)
-                                .padding()
-                                .foregroundStyle(textColor)
-                        }
-                    }
-                    NavigationLink(destination: WheelView(
-                        names: $names,
-                        name: $name,
-                        bgColor: $bgColor
-                    )){
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundStyle(.blue)
-                                .frame(width: 120, height: 50);
-                            Text("Wheel")
                                 .bold()
                                 .font(.title)
                                 .padding()
