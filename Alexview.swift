@@ -6,7 +6,18 @@ struct AlexView: View {
         ZStack{
             bgColor
                 .ignoresSafeArea()
-            Text("")
+          
+            ZStack{
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundStyle(.blue)
+                    .frame(width: 300, height: 50)
+                
+                
+                Text("Alexander Diaz")
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundStyle(textColor)
+            }
         }
     }
 }
