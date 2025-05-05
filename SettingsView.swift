@@ -9,16 +9,9 @@ struct SettingsView: View {
             bgColor
                 .ignoresSafeArea()
             VStack{
-                ZStack{
-                    RoundedRectangle(cornerRadius: 35)
-                        .frame(width: 330,height: 89)
-                        .foregroundStyle(.white)
-                    Text("App Settings")
-                        .font(.largeTitle)
-                        .bold()
-                        .foregroundStyle(textColor)
-                        .offset(y:-150)
-                }
+                
+                
+                
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
@@ -33,6 +26,18 @@ struct SettingsView: View {
                       
                         .offset(y:-10)
                 }
+                ZStack{
+                    RoundedRectangle(cornerRadius: 35)
+                        .frame(width: 330,height: 89)
+                        .foregroundStyle(.white)
+                    Text("App Settings")
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundStyle(textColor)
+                        .offset(y:-150)
+                }
+                
+               
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
@@ -43,7 +48,7 @@ struct SettingsView: View {
                         .bold()
                         .foregroundStyle(.black)
                 }
-                .offset(y:-150)
+                .offset(y:-90)
                 .frame(width:275)
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
