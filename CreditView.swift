@@ -29,7 +29,7 @@ struct CreditView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(.blue)
-                            .frame(width: 120, height: 50);
+                            .frame(width: 200, height: 50);
                         Text("Alex Diaz")
                             .bold()
                             .font(.title)
@@ -44,7 +44,7 @@ struct CreditView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(.blue)
-                            .frame(width: 160, height: 50);
+                            .frame(width: 200, height: 50);
                         Text("Luca Fabian")
                             .bold()
                             .font(.title)
@@ -61,7 +61,7 @@ struct CreditView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(.blue)
-                            .frame(width: 180, height: 50);
+                            .frame(width: 200, height: 50);
                         Text("Oskar Piątek")
                             .bold()
                             .font(.title)
@@ -76,7 +76,7 @@ struct CreditView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(.blue)
-                            .frame(width: 210, height: 50);
+                            .frame(width: 200, height: 50);
                         Text("Ryusei Yamada")
                             .bold()
                             .font(.title)
