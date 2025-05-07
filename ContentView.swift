@@ -5,6 +5,7 @@ struct ContentView: View {
     @State var name: String = ""
     @State var bgColor: Color = Color.cyan
     @State var textColor: Color = Color.white
+    @State var Rotate = 0.0
     var body: some View {
         NavigationStack{
             ZStack{
@@ -31,13 +32,21 @@ struct ContentView: View {
                     )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
+                                .rotationEffect(.degrees(Rotate))
+                                .animation(.easeInOut(duration: 3).delay(0),value: Rotate)
                                 .foregroundStyle(.blue)
                                 .frame(width: 100, height: 50);
+                            
                             Text("Start")
                                 .bold()
                                 .font(.title)
                                 .padding()
                                 .foregroundStyle(textColor)
+                                .rotationEffect(.degrees(Rotate))
+                                 .animation(.easeInOut(duration: 3).delay(0),value: Rotate)
+                                .onTapGesture {
+                                    Rotate += 360
+                                }
                         }
                     }
                     
