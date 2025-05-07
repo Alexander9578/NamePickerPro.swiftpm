@@ -36,6 +36,7 @@ struct ContentView: View {
                                 .animation(.easeInOut(duration: 3).delay(0),value: Rotate)
                                 .foregroundStyle(.blue)
                                 .frame(width: 100, height: 50);
+                               
                             
                             Text("Start")
                                 .bold()
@@ -45,7 +46,7 @@ struct ContentView: View {
                                 .rotationEffect(.degrees(Rotate))
                                  .animation(.easeInOut(duration: 3).delay(0),value: Rotate)
                                 .onTapGesture {
-                                    Rotate += 360
+                                    Rotate += 362
                                 }
                         }
                     }
