@@ -15,21 +15,21 @@ struct SettingsView: View {
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.blue)
                         .frame(width: 300, height: 50)
                         .offset(y:-10)
                     
-                    Text("Background color")
+                    Text("Background Color")
                         .bold()
-                        .foregroundStyle(.white)
+                        .foregroundStyle(textColor)
                         .font(.title)
                       
                         .offset(y:-10)
                 }
                 ZStack{
                     RoundedRectangle(cornerRadius: 35)
-                        .frame(width: 330,height: 89)
-                        .foregroundStyle(.white)
+                        .frame(width: 200 ,height: 75)
+                        .foregroundStyle(.blue)
                     Text("App Settings")
                         .font(.largeTitle)
                         .bold()
@@ -41,22 +41,23 @@ struct SettingsView: View {
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.cyan)
                         .frame(width: 125, height: 50)
-                        .offset(x: -85)
+                        .offset(x: -22)
                     ColorPicker("Choose Color", selection: $bgColor)
                         .bold()
-                        .foregroundStyle(.black)
+                        .foregroundStyle(textColor)
+                        .frame(width: 150, height: 75)
                 }
                 .offset(y:-90)
                 .frame(width:275)
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.blue)
                         .frame(width: 300, height: 50)
                         .offset(y:-10)
                     
-                    Text("Text color")
+                    Text("Text Color")
                         .bold()
                         .foregroundStyle(.white)
                         .font(.title)
@@ -66,16 +67,17 @@ struct SettingsView: View {
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.blue)
                         .frame(width: 200, height: 75)
                     ZStack{
                         RoundedRectangle(cornerRadius:10)
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.cyan)
                             .frame(width: 120, height: 50)
                             .offset(x: -22)
                         ColorPicker("Choose Color", selection: $textColor)
                             .frame(width: 150 , height: 75)
                             .bold()
+                            .foregroundStyle(textColor)
                     }
                 }
             }
