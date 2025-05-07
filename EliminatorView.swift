@@ -4,7 +4,7 @@ struct EliminatorView: View {
     @State var textColor: Color = Color.white
     var body: some View {
         ZStack{
-            bgColor
+            Color.red
                 .ignoresSafeArea()
             Text("")
         }
