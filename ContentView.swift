@@ -29,7 +29,8 @@ struct ContentView: View {
                         names: $names,
                         name: $name,
                         bgColor: $bgColor,
-                        textColor: $textColor
+                        textColor: $textColor,
+                        tbColor: tbColor
                     )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
