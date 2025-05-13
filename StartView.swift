@@ -5,6 +5,7 @@ struct StartView: View {
     @Binding var name: String
     @Binding var bgColor: Color
     @Binding var textColor: Color
+    @State var tbColor: Color = Color.blue
     var body: some View {
         ZStack{
             bgColor
@@ -18,7 +19,7 @@ struct StartView: View {
                 )){
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(.blue)
+                            .foregroundStyle(tbColor)
                             .frame(width: 400, height: 150);
                         
                         
@@ -37,7 +38,7 @@ struct StartView: View {
                 )){
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(.blue)
+                            .foregroundStyle(tbColor)
                             .frame(width: 400, height: 150);
                         Text("Wheel Name Picker")
                             .bold()

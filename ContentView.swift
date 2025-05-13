@@ -6,50 +6,54 @@ struct ContentView: View {
     @State var bgColor: Color = Color.cyan
     @State var textColor: Color = Color.white
     @State var Rotate = 0.0
+    @State var tbColor: Color = Color.blue
     var body: some View {
         NavigationStack{
             ZStack{
                 bgColor
                     .ignoresSafeArea()
                 VStack{
-                    HStack {
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundStyle(.blue)
-                                .frame(width: 375, height: 50);
-                            
-                            Text("NAME PICKER PRO ")
-                                .font(.largeTitle)
-                                .bold()
-                                .foregroundStyle(textColor)
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundStyle(tbColor)
+                            .frame(width: 375, height: 50);
+                        
+                        Text("NAME PICKER PRO ")
+                            .font(.largeTitle)
+                            .bold()
+                            .foregroundStyle(textColor)
+                    }
+                    .rotationEffect(.degrees(Rotate))
+                    .onAppear {
+                        withAnimation(Animation.linear(duration: 6).repeatForever(autoreverses: false)) {
+                            Rotate = 360
                         }
                     }
                     NavigationLink(destination: StartView(
                         names: $names,
                         name: $name,
                         bgColor: $bgColor,
-                        textColor: $textColor
+                        textColor: $textColor,
+                        tbColor: tbColor
                     )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
-                               
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(tbColor)
                                 .frame(width: 100, height: 50);
-                               
+                            
                             
                             Text("Start")
                                 .bold()
                                 .font(.title)
                                 .padding()
                                 .foregroundStyle(textColor)
-                                
                         }
                     }
                     
                     NavigationLink(destination: EliminatorView(
-                     
+                        
                         bgColor: $bgColor,
-                       
+                        
                     )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
@@ -62,8 +66,8 @@ struct ContentView: View {
                                 .foregroundStyle(textColor)
                         }
                     }
-                   NavigationLink(destination: SettingsView(
-                    bgColor: $bgColor, textColor: $textColor, tbColor: $tbColor
+                    NavigationLink(destination: SettingsView(
+                        bgColor: $bgColor, textColor: $textColor, tbColor: $tbColor
                     ) ){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
