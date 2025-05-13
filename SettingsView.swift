@@ -4,6 +4,7 @@ struct SettingsView: View {
     @Binding var bgColor: Color
     
     @Binding var textColor: Color
+    @Binding var tbColor: Color
     var body: some View {
         ZStack{
             bgColor
@@ -76,6 +77,35 @@ struct SettingsView: View {
                             .frame(width: 120, height: 50)
                             .offset(x: -22)
                         ColorPicker("Choose Color", selection: $textColor)
+                            .frame(width: 150 , height: 75)
+                            .bold()
+                            .foregroundStyle(textColor)
+                    }
+                }
+                .padding()
+                ZStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .foregroundStyle(.blue)
+                        .frame(width: 300, height: 50)
+                        .offset(y:-10)
+                    
+                    Text("Text Box Color")
+                        .bold()
+                        .foregroundStyle(textColor)
+                        .font(.title)
+                      
+                        .offset(y:-10)
+                }
+                ZStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .foregroundStyle(.blue)
+                        .frame(width: 200, height: 75)
+                    ZStack{
+                        RoundedRectangle(cornerRadius:10)
+                            .foregroundStyle(.tertiary)
+                            .frame(width: 120, height: 50)
+                            .offset(x: -22)
+                        ColorPicker("Choose Color", selection: $tbColor)
                             .frame(width: 150 , height: 75)
                             .bold()
                             .foregroundStyle(textColor)

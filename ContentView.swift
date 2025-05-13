@@ -6,6 +6,7 @@ struct ContentView: View {
     @State var bgColor: Color = Color.cyan
     @State var textColor: Color = Color.white
     @State var Rotate = 0.0
+    @State var tbColor: Color = Color.blue
     var body: some View {
         NavigationStack{
             ZStack{
@@ -68,7 +69,7 @@ struct ContentView: View {
                         }
                     }
                    NavigationLink(destination: SettingsView(
-                    bgColor: $bgColor, textColor: $textColor
+                    bgColor: $bgColor, textColor: $textColor, tbColor: $tbColor
                     ) ){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
