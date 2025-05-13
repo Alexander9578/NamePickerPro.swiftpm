@@ -147,3 +147,7 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+//import AVFoundation
+//var audioplayer: AVAudioPlayer?
+//if let path = Bundle.main.path(forResource: "Lobby.band", ofType: "mp3")
+//    let url
