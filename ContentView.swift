@@ -16,7 +16,7 @@ struct ContentView: View {
                     HStack {
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(tbColor)
                                 .frame(width: 375, height: 50);
                             
                             Text("NAME PICKER PRO ")
@@ -35,7 +35,7 @@ struct ContentView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .rotationEffect(.degrees(Rotate))
                                 .animation(.easeInOut(duration: 3).delay(0),value: Rotate)
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(tbColor)
                                 .frame(width: 100, height: 50);
                                
                             
@@ -73,7 +73,7 @@ struct ContentView: View {
                     ) ){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(tbColor)
                                 .frame(width: 120, height: 50);
                             Text("Settings")
                                 .bold()
@@ -88,7 +88,7 @@ struct ContentView: View {
                     )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(tbColor)
                                 .frame(width: 120, height: 50);
                             Text("Credits")
                                 .bold()

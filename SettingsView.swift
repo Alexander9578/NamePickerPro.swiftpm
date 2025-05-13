@@ -16,7 +16,7 @@ struct SettingsView: View {
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(tbColor)
                         .frame(width: 300, height: 50)
                         .offset(y:-10)
                     
@@ -30,7 +30,7 @@ struct SettingsView: View {
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
                         .frame(width: 200 ,height: 75)
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(tbColor)
                     Text("App Settings")
                         .font(.largeTitle)
                         .bold()
@@ -55,7 +55,7 @@ struct SettingsView: View {
                 .frame(width:275)
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(tbColor)
                         .frame(width: 300, height: 50)
                         .offset(y:-10)
                     
@@ -69,7 +69,7 @@ struct SettingsView: View {
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(tbColor)
                         .frame(width: 200, height: 75)
                     ZStack{
                         RoundedRectangle(cornerRadius:10)
@@ -85,7 +85,7 @@ struct SettingsView: View {
                 .padding()
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(tbColor)
                         .frame(width: 300, height: 50)
                         .offset(y:-10)
                     
@@ -98,7 +98,7 @@ struct SettingsView: View {
                 }
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(tbColor)
                         .frame(width: 200, height: 75)
                     ZStack{
                         RoundedRectangle(cornerRadius:10)
