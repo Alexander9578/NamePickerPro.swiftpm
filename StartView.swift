@@ -22,12 +22,15 @@ struct StartView: View {
                             .foregroundStyle(tbColor)
                             .frame(width: 400, height: 150);
                         
-                        
-                        Text("Text Name Picker")
-                            .bold()
-                            .font(.title)
-                            .padding()
-                            .foregroundStyle(textColor)
+                        VStack{
+                            Text("Text Name Picker")
+                                .bold()
+                                .font(.title)
+                                .padding()
+                                .foregroundStyle(textColor)
+                            Text("Quickly generate a random name")
+                                .foregroundStyle(.white)
+                        }
                     }
                 }
                 .padding()
@@ -40,12 +43,17 @@ struct StartView: View {
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(tbColor)
                             .frame(width: 400, height: 150);
+                        VStack{
                         Text("Wheel Name Picker")
                             .bold()
                             .font(.title)
                             .padding()
                             .foregroundStyle(textColor)
+                            Text("Spin names at a glance with a wheel animation")
+                            
+                                .foregroundStyle(.white)
                     }
+                }
                 }
             }
         }
