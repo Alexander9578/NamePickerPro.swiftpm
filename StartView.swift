@@ -19,7 +19,9 @@ struct StartView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(.blue)
-                            .frame(width: 240, height: 50);
+                            .frame(width: 400, height: 150);
+                        
+                        
                         Text("Text Name Picker")
                             .bold()
                             .font(.title)
@@ -36,7 +38,7 @@ struct StartView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(.blue)
-                            .frame(width: 280, height: 50);
+                            .frame(width: 400, height: 150);
                         Text("Wheel Name Picker")
                             .bold()
                             .font(.title)

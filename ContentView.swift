@@ -63,11 +63,11 @@ struct ContentView: View {
                         }
                     }
                    NavigationLink(destination: SettingsView(
-                    bgColor: $bgColor, textColor: $textColor
+                    bgColor: $bgColor, textColor: $textColor, tbColor: $tbColor
                     ) ){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(tbColor)
                                 .frame(width: 120, height: 50);
                             Text("Settings")
                                 .bold()
@@ -78,11 +78,11 @@ struct ContentView: View {
                         
                     }
                     NavigationLink(destination: CreditView(
-                        bgColor: $bgColor, textColor: textColor
+                        bgColor: $bgColor, textColor: textColor, tbColor: tbColor
                     )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
-                                .foregroundStyle(.blue)
+                                .foregroundStyle(tbColor)
                                 .frame(width: 120, height: 50);
                             Text("Credits")
                                 .bold()

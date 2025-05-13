@@ -5,6 +5,7 @@ import SwiftUI
 struct CreditView: View {
     @Binding var bgColor: Color
     @State var textColor: Color = Color.white
+    @State var tbColor: Color = Color.blue
     var body: some View {
         ZStack{
             bgColor
@@ -13,7 +14,7 @@ struct CreditView: View {
             VStack{
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(tbColor)
                         .frame(width: 360, height: 50)
                         .offset(y:-10)
                     
@@ -24,11 +25,11 @@ struct CreditView: View {
                         .offset(y:-10)
                 }
                 NavigationLink(destination: AlexView(
-                    bgColor: $bgColor  , textColor: textColor
+                    bgColor: $bgColor  , textColor: textColor, tbColor: tbColor
                 ) ){
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(.blue)
+                            .foregroundStyle(tbColor)
                             .frame(width: 200, height: 50);
                         Text("Alex Diaz")
                             .bold()
@@ -43,7 +44,7 @@ struct CreditView: View {
                 ) ){
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(.blue)
+                            .foregroundStyle(tbColor)
                             .frame(width: 200, height: 50);
                         Text("Luca Fabian")
                             .bold()
@@ -60,7 +61,7 @@ struct CreditView: View {
                 ) ){
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(.blue)
+                            .foregroundStyle(tbColor)
                             .frame(width: 200, height: 50);
                         Text("Oskar Piątek")
                             .bold()
@@ -75,7 +76,7 @@ struct CreditView: View {
                 ) ){
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(.blue)
+                            .foregroundStyle(tbColor)
                             .frame(width: 200, height: 50);
                         Text("Ryusei Yamada")
                             .bold()
