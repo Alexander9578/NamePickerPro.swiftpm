@@ -2,6 +2,7 @@ import SwiftUI
 struct AlexView: View {
     @Binding var bgColor: Color
     @State var textColor: Color = Color.white
+    @State var tbColor: Color = Color.blue
     var body: some View {
         ZStack{
             bgColor
@@ -9,7 +10,7 @@ struct AlexView: View {
             
             ZStack{
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundStyle(.blue)
+                    .foregroundStyle(tbColor)
                     .frame(width: 300, height: 50, alignment: .top)
                    
                 
@@ -27,7 +28,7 @@ struct AlexView: View {
             ZStack{
                 
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundStyle(.blue)
+                    .foregroundStyle(tbColor)
                     .frame(width: 320, height: 435, alignment: .top)
                 
                 Image("AlexPicture2")

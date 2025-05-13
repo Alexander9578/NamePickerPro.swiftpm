@@ -84,7 +84,7 @@ struct ContentView: View {
                         
                     }
                     NavigationLink(destination: CreditView(
-                        bgColor: $bgColor, textColor: textColor
+                        bgColor: $bgColor, textColor: textColor, tbColor: tbColor
                     )){
                         ZStack{
                             RoundedRectangle(cornerRadius: 10)
