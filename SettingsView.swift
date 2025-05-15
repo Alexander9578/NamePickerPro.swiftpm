@@ -5,6 +5,7 @@ struct SettingsView: View {
     
     @Binding var textColor: Color
     @Binding var tbColor: Color
+    @State var isPressed = true
     var body: some View {
         ZStack{
             bgColor
@@ -111,7 +112,35 @@ struct SettingsView: View {
                             .foregroundStyle(textColor)
                     }
                 }
+                .padding()
+                
+                ZStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .foregroundStyle(tbColor)
+                        .frame(width: 300, height: 50)
+                        .offset(y:-10)
+                    
+                    Text("Toggle Music")
+                        .bold()
+                        .foregroundStyle(textColor)
+                        .font(.title)
+                      
+                        .offset(y:-10)
+                }
+
+                Button {
+                    
+                    isPressed.toggle()
+                } label: {
+                    Image(systemName: isPressed ? "speaker.wave.3.fill" : "speaker.slash.fill")
+                }
+                .font(.largeTitle)
+                
+                
+                
+                
+                }
             }
         }
     }
-}
+
