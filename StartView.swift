@@ -54,7 +54,25 @@ struct StartView: View {
                                 .foregroundStyle(.white)
                     }
                 }
+                    
                 }
+                NavigationLink(destination: EliminatorView(
+                    
+                    bgColor: $bgColor,
+                    
+                )){
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundStyle(.red)
+                            .frame(width: 150, height: 50);
+                        Text("Eliminator")
+                            .bold()
+                            .font(.title)
+                            .padding()
+                            .foregroundStyle(textColor)
+                    }
+                }
+
             }
         }
     }
