@@ -7,6 +7,8 @@ struct ContentView: View {
     @State var textColor: Color = Color.white
     @State var Rotate = 0.0
     @State var tbColor: Color = Color.blue
+    @State var EL : Color = Color.red
+    @State var Secret : Color = (Color(red: 1.0, green: 0.84,blue: 0.0))
     var body: some View {
         NavigationStack{
             ZStack{
@@ -50,6 +52,22 @@ struct ContentView: View {
                         }
                     }
                     
+                    NavigationLink(destination: EliminatorView(
+                        
+                        bgColor: $bgColor,
+                        
+                    )){
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundStyle(EL)
+                                .frame(width: 150, height: 50);
+                            Text("Eliminator")
+                                .bold()
+                                .font(.title)
+                                .padding()
+                                .foregroundStyle(textColor)
+                        }
+                    }
                     NavigationLink(destination: SettingsView(
                         bgColor: $bgColor, textColor: $textColor, tbColor: $tbColor
                     ) ){
@@ -79,6 +97,36 @@ struct ContentView: View {
                                 .foregroundStyle(textColor)
                         }
                     }
+                    ZStack{
+                        
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundStyle(Secret)
+                            .frame(width: 110, height: 50);
+                        Button("Secret"){
+                            tbColor = (Color(red: 0.8, green: 0.66,blue: 0.0))
+                            Secret = (Color(red: 0.8, green: 0.66,blue: 0.0))
+                            bgColor = (Color(red: 1.0, green: 0.84,blue: 0.0))
+                            textColor = (Color(red: 1.0, green: 0.84,blue: 0.0))
+                            EL = (Color(red: 0.8, green: 0.66,blue: 0.0))
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        }
+                        
+                        .bold()
+                        .font(.title)
+                        .padding()
+                        .foregroundStyle(textColor)
+                        
+                       
+                        
+                    }
+                    
                     ZStack{
                         RoundedRectangle(cornerRadius: 25)
                             .frame(width: 390,height: 150)
