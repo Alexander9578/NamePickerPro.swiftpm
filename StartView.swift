@@ -57,9 +57,9 @@ struct StartView: View {
                     
                 }
                 NavigationLink(destination: EliminatorView(
-                    
-                    bgColor: $bgColor,
-                    
+                    names: $names,
+                    name: $name,
+                    bgColor: $bgColor
                 )){
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)

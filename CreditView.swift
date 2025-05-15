@@ -24,9 +24,9 @@ struct CreditView: View {
                         .font(.largeTitle)
                         .offset(y:-10)
                 }
-                NavigationLink(destination: AlexView(
-                    bgColor: $bgColor  , textColor: textColor, tbColor: tbColor
-                ) ){
+                Button{
+                    
+                } label: {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(tbColor)
@@ -39,9 +39,9 @@ struct CreditView: View {
                     }
                     
                 }
-                NavigationLink(destination: LucaView(
-                    bgColor: $bgColor  , textColor: textColor
-                ) ){
+                Button{
+                    
+                } label: {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(tbColor)
@@ -56,9 +56,9 @@ struct CreditView: View {
                 }
                 
                 
-                NavigationLink(destination: OskarView(
-                    bgColor: $bgColor  , textColor: textColor
-                ) ){
+                Button{
+                    
+                } label: {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(tbColor)
@@ -71,9 +71,9 @@ struct CreditView: View {
                     }
                     
                 }
-                NavigationLink(destination: RyuseiView(
-                    bgColor: $bgColor  , textColor: textColor
-                ) ){
+                Button{
+                    
+                } label: {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(tbColor)
