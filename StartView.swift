@@ -64,15 +64,18 @@ struct StartView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(.red)
-                            .frame(width: 150, height: 50);
-                        Text("Eliminator")
-                            .bold()
-                            .font(.title)
-                            .padding()
-                            .foregroundStyle(textColor)
+                            .frame(width: 400, height: 150);
+                        VStack{
+                            Text("Eliminator")
+                                .bold()
+                                .font(.title)
+                                .padding()
+                                .foregroundStyle(textColor)
+                            Text("Enter names, the last one standing wins")
+                                .foregroundStyle(.white)
+                        }
                     }
                 }
-
             }
         }
     }
