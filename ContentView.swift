@@ -26,7 +26,7 @@ struct ContentView: View {
                             .bold()
                             .foregroundStyle(textColor)
                     }
-                    .rotationEffect(.degrees(Rotate))
+                    
                     .onAppear {
                         withAnimation(Animation.linear(duration: 6).repeatForever(autoreverses: false)) {
                             Rotate = 360
