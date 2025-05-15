@@ -19,12 +19,9 @@ struct EliminatorView: View {
                     .font(.system(size: 40))
                     .padding()
                     
-                Text("Names:")
-                    .foregroundStyle(textColor)
-                    .bold()
-                    .font(.largeTitle)
+              
                 if names.isEmpty{
-                    Text("Start entering names!")
+                    Text("Last one standing wins!")
                         .font(.system(size: 20))
                         .padding()
                         .foregroundStyle(textColor)
@@ -70,7 +67,7 @@ struct EliminatorView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 5)
                             .frame(width: 200, height: 40)
-                            .foregroundStyle(.green)
+                            .foregroundStyle(.black)
                         Text("Choose Random Name")
                             .foregroundStyle(.white)
                     }
