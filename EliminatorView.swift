@@ -16,8 +16,9 @@ struct EliminatorView: View {
                 Text("Eliminator")
                     .foregroundStyle(textColor)
                     .bold()
-                    .font(.system(size: 35))
+                    .font(.system(size: 40))
                     .padding()
+                    
                 Text("Names:")
                     .foregroundStyle(textColor)
                     .bold()
