@@ -50,11 +50,10 @@ struct ContentView: View {
                                 .font(.title)
                                 .padding()
                                 .foregroundStyle(textColor)
-                            
                         }
                     }
                     
-                  
+                 
                     NavigationLink(destination: SettingsView(
                         bgColor: $bgColor, textColor: $textColor, tbColor: $tbColor
                     ) ){
@@ -121,7 +120,6 @@ struct ContentView: View {
                         .font(.title)
                         .padding()
                         .foregroundStyle(textColor)
-                        
                         
                        
                         
