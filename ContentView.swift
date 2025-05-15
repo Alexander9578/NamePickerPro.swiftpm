@@ -9,6 +9,7 @@ struct ContentView: View {
     @State var tbColor: Color = Color.blue
     @State var EL : Color = Color.red
     @State var Secret : Color = (Color(red: 1.0, green: 0.84,blue: 0.0))
+    @State var ONOFF = false
     var body: some View {
         NavigationStack{
             ZStack{
@@ -87,13 +88,25 @@ struct ContentView: View {
                         
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(Secret)
-                            .frame(width: 110, height: 50);
-                        Button("Secret"){
-                            tbColor = (Color(red: 0.8, green: 0.66,blue: 0.0))
-                            Secret = (Color(red: 0.8, green: 0.66,blue: 0.0))
-                            bgColor = (Color(red: 1.0, green: 0.84,blue: 0.0))
-                            textColor = (Color(red: 1.0, green: 0.84,blue: 0.0))
-                            EL = (Color(red: 0.8, green: 0.66,blue: 0.0))
+                            .frame(width: 130, height: 50);
+                        Button("Premium"){
+                            ONOFF.toggle()
+                            
+                            if ONOFF {
+                                tbColor = (Color(red: 0.8, green: 0.66,blue: 0.0))
+                                Secret = (Color(red: 0.8, green: 0.66,blue: 0.0))
+                                bgColor = (Color(red: 1.0, green: 0.84,blue: 0.0))
+                                textColor = (Color(red: 1.0, green: 0.84,blue: 0.0))
+                                EL = (Color(red: 0.8, green: 0.66,blue: 0.0))
+                            } else {
+                                tbColor = Color.blue
+                                Secret = (Color(red: 1.0, green: 0.84,blue: 0.0))
+                                bgColor = Color.cyan
+                                textColor = Color.white
+                                EL = Color.red
+                                
+                            }
+                           
                             
                             
                             
