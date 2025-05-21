@@ -15,7 +15,7 @@ struct ContentView: View {
             ZStack{
                 bgColor
                     .ignoresSafeArea()
-                VStack{
+                 VStack{
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(tbColor)
@@ -143,7 +143,8 @@ struct ContentView: View {
                                     .offset(x: -35)
                                     .font(.largeTitle)
                                 
-                                    .padding(-1)
+                                    .padding(-0.99)
+                                    .font(.title2)
                                 
                             }
                             Text("Claim free items today!")
