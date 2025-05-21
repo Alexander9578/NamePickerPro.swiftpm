@@ -12,6 +12,12 @@ struct StartView: View {
                 .ignoresSafeArea()
             
             VStack{
+                Text("Welcome!")
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundStyle(.white)
+                Text("Pick a mode to continue.")
+                    .foregroundStyle(.white)
                 NavigationLink(destination: PlayView(
                     names: $names,
                     name: $name,
@@ -22,6 +28,8 @@ struct StartView: View {
                             .foregroundStyle(tbColor)
                             .frame(width: 400, height: 150);
                         
+                  
+
                         VStack{
                             Text("Text Name Picker")
                                 .bold()
