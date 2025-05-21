@@ -114,27 +114,6 @@ struct SettingsView: View {
                 }
                 .padding()
                 
-                ZStack{
-                    RoundedRectangle(cornerRadius: 20)
-                        .foregroundStyle(tbColor)
-                        .frame(width: 300, height: 50)
-                        .offset(y:-10)
-                    
-                    Text("Toggle Music")
-                        .bold()
-                        .foregroundStyle(textColor)
-                        .font(.title)
-                      
-                        .offset(y:-10)
-                }
-
-                Button {
-                    
-                    isPressed.toggle()
-                } label: {
-                    Image(systemName: isPressed ? "speaker.wave.3.fill" : "speaker.slash.fill")
-                }
-                .font(.largeTitle)
                 
                 
                 
