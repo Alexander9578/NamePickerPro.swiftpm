@@ -9,6 +9,7 @@ struct ContentView: View {
     @State var tbColor: Color = Color.blue
     @State var EL : Color = Color.red
     @State var Secret : Color = (Color(red: 1.0, green: 0.84,blue: 0.0))
+    @State var showAlert = false
     @State var ONOFF = false
     var body: some View {
         NavigationStack{
@@ -16,6 +17,20 @@ struct ContentView: View {
                 bgColor
                     .ignoresSafeArea()
                  VStack{
+                     Button {
+                         showAlert = true
+                     } label: {
+                         Image(systemName: "questionmark.circle.fill")
+                             .font(.largeTitle)
+                     }
+
+                     .alert("App guide", isPresented: $showAlert) {
+                         
+                         Button("Got it!", role:  .cancel) {}
+                     } message: {
+                                Text("Welcome! Name picker pro is an app designed to simply and efficently deliver name selections. Click (start) to begin, and select one of the three modes based on your preference. You can also customize your app to your liking. Enjoy!")
+                     }
+                     .padding()
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .foregroundStyle(tbColor)
