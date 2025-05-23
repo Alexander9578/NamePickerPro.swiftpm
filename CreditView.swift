@@ -13,7 +13,7 @@ struct CreditView: View {
             ZStack{
                 RoundedRectangle(cornerRadius: 20)
                     .foregroundStyle(tbColor)
-                    .frame(width: 280, height: 450)
+                    .frame(width: 280, height: 350)
                 VStack{
 
                         Text("Developers")
@@ -24,23 +24,27 @@ struct CreditView: View {
                         Text("Alex Diaz")
                             .bold()
                             .font(.title)
-                            .padding()
                             .foregroundStyle(textColor)
+                    Text("Created Settings Page")
+                        .foregroundStyle(textColor)
                         Text("Luca Fabian")
                             .bold()
                             .font(.title)
-                            .padding()
                             .foregroundStyle(textColor)
+                    Text("Created the User Interface")
+                        .foregroundStyle(textColor)
                         Text("Oskar Piątek")
                             .bold()
                             .font(.title)
-                            .padding()
                             .foregroundStyle(textColor)
+                    Text("Created the Functions ")
+                        .foregroundStyle(textColor)
                         Text("Ryusei Yamada")
                             .bold()
                             .font(.title)
-                            .padding()
                             .foregroundStyle(textColor)
+                    Text("Helped with small details")
+                        .foregroundStyle(textColor)
                     
                 }
             }
