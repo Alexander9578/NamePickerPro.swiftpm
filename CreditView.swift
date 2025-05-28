@@ -25,7 +25,7 @@ struct CreditView: View {
                             .bold()
                             .font(.title)
                             .foregroundStyle(textColor)
-                    Text("Created Settings Page")
+                    Text("Did his Human Geo homework")
                         .foregroundStyle(textColor)
                         Text("Luca Fabian")
                             .bold()
@@ -43,7 +43,7 @@ struct CreditView: View {
                             .bold()
                             .font(.title)
                             .foregroundStyle(textColor)
-                    Text("Helped with small details")
+                    Text("Created all of the UI")
                         .foregroundStyle(textColor)
                     
                 }

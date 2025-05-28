@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @State var names: [String] = []
     @State var name: String = ""
-    @State var bgColor: Color = Color.pink
+    @State var bgColor: Color = Color.cyan
     @State var textColor: Color = Color.white
     @State var Rotate = 0.0
     @State var tbColor: Color = Color.blue
