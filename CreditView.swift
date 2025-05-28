@@ -10,86 +10,44 @@ struct CreditView: View {
         ZStack{
             bgColor
                 .ignoresSafeArea()
-            
-            VStack{
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(tbColor)
-                        .frame(width: 360, height: 50)
-                        .offset(y:-10)
-                    
-                    Text("Developers")
-                        .bold()
-                        .foregroundStyle(textColor)
-                        .font(.largeTitle)
-                        .offset(y:-10)
-                }
-                Button{
-                    
-                } label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(tbColor)
-                            .frame(width: 200, height: 50);
+            ZStack{
+                RoundedRectangle(cornerRadius: 20)
+                    .foregroundStyle(tbColor)
+                    .frame(width: 280, height: 350)
+                VStack{
+
+                        Text("Developers")
+                            .bold()
+                            .foregroundStyle(textColor)
+                            .font(.largeTitle)
+                            .offset(y:-10)
                         Text("Alex Diaz")
                             .bold()
                             .font(.title)
-                            .padding()
                             .foregroundStyle(textColor)
-                    }
-                    
-                }
-                Button{
-                    
-                } label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(tbColor)
-                            .frame(width: 200, height: 50);
+                    Text("Created Settings Page")
+                        .foregroundStyle(textColor)
                         Text("Luca Fabian")
                             .bold()
                             .font(.title)
-                            .padding()
                             .foregroundStyle(textColor)
-                    }
-                    
-                }
-                
-                
-                Button{
-                    
-                } label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(tbColor)
-                            .frame(width: 200, height: 50);
+                    Text("Created the User Interface")
+                        .foregroundStyle(textColor)
                         Text("Oskar Piątek")
                             .bold()
                             .font(.title)
-                            .padding()
                             .foregroundStyle(textColor)
-                    }
-                    
-                }
-                Button{
-                    
-                } label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundStyle(tbColor)
-                            .frame(width: 200, height: 50);
+                    Text("Created the Functions ")
+                        .foregroundStyle(textColor)
                         Text("Ryusei Yamada")
                             .bold()
                             .font(.title)
-                            .padding()
                             .foregroundStyle(textColor)
-                    }
+                    Text("Helped with small details")
+                        .foregroundStyle(textColor)
                     
                 }
             }
-            
         }
     }
 }
-
-

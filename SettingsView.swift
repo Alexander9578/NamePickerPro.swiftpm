@@ -12,8 +12,12 @@ struct SettingsView: View {
                 .ignoresSafeArea()
             VStack{
                 
-                
-                
+            
+                Text("Mix and match different colors to your liking!")
+                    .bold()
+                    .foregroundStyle(textColor)
+                    .offset(y:-10)
+                    
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
@@ -36,7 +40,7 @@ struct SettingsView: View {
                         .font(.largeTitle)
                         .bold()
                         .foregroundStyle(textColor)
-                        .offset(y:-150)
+                        .offset(y:-170)
                 }
                 
                
