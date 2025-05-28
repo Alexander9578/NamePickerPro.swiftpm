@@ -12,7 +12,7 @@ struct ContentView: View {
     @State var showAlert = false
     @State var ONOFF = false
     @State private var CurrentColorIndex = 0
-          let colors: [Color] = [.red, .orange, .yellow, .green, .blue, .indigo, .purple]
+          let colors: [Color] = [.red, .orange, .yellow, .green, .indigo, .purple]
     
     var body: some View {
         NavigationStack{
