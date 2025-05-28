@@ -41,7 +41,7 @@ struct StartView: View {
                         }
                     }
                 }
-                .padding()
+                
                 NavigationLink(destination: WheelView(
                     names: $names,
                     name: $name,
@@ -55,7 +55,7 @@ struct StartView: View {
                         Text("Wheel Name Picker")
                             .bold()
                             .font(.title)
-                            .padding()
+                            
                             .foregroundStyle(textColor)
                             Text("Spin names at a glance with a wheel animation")
                             

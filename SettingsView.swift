@@ -7,112 +7,114 @@ struct SettingsView: View {
     @Binding var tbColor: Color
     @State var isPressed = true
     var body: some View {
+       
+        
         ZStack{
             bgColor
                 .ignoresSafeArea()
-            VStack{
-                
-            
-                Text("Mix and match different colors to your liking!")
-                    .bold()
-                    .foregroundStyle(textColor)
-                    .offset(y:-10)
-                    
-                
-                ZStack{
-                    RoundedRectangle(cornerRadius: 20)
-                        .foregroundStyle(tbColor)
-                        .frame(width: 300, height: 50)
-                        .offset(y:-10)
-                    
-                    Text("Background Color")
-                        .bold()
-                        .foregroundStyle(textColor)
-                        .font(.title)
-                      
-                        .offset(y:-10)
-                }
-                ZStack{
-                    RoundedRectangle(cornerRadius: 20)
-                        .frame(width: 200 ,height: 75)
-                        .foregroundStyle(tbColor)
+            VStack (spacing: 30) {
+                Image(systemName: "gear")
+                    .font(.largeTitle)
+              
                     Text("App Settings")
                         .font(.largeTitle)
                         .bold()
                         .foregroundStyle(textColor)
-                        .offset(y:-170)
+                   
+                        .padding(-1)
+            
+                Text("Mix and match different colors to your liking!")
+                    .bold()
+                    .foregroundStyle(textColor)
+                  
+                    
+                
+                ZStack{
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundStyle(tbColor)
+                        .frame(width: 150 ,height: 50)
+                       
+                    
+                    Text("Background")
+                        
+                        .foregroundStyle(textColor)
+                        .font(.title)
+                       
+                      
+                     
                 }
+                
                 
                
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(.tertiary)
-                        .frame(width: 125, height: 50)
-                        .offset(x: -22, y: -2)
                     
-                    ColorPicker("Choose Color", selection: $bgColor)
-                        .bold()
+                        .frame(width: 150 ,height: 50)
+                    
+                    ColorPicker("  Choose Color", selection: $bgColor)
+                      
                         .foregroundStyle(textColor)
-                        .frame(width: 150, height: 75)
+                        .frame(width: 150, height: 50)
                 }
-                .offset(y:-90)
+            
                 .frame(width:275)
                 ZStack{
-                    RoundedRectangle(cornerRadius: 20)
+                    RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(tbColor)
-                        .frame(width: 300, height: 50)
-                        .offset(y:-10)
+                        .frame(width: 150 ,height: 50)
+                      
                     
                     Text("Text Color")
-                        .bold()
+                       
                         .foregroundStyle(textColor)
                         .font(.title)
                       
-                        .offset(y:-10)
+                    
                 }
                 
                 ZStack{
-                    RoundedRectangle(cornerRadius: 20)
+                    RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(tbColor)
-                        .frame(width: 200, height: 75)
+                        .frame(width: 150 ,height: 50)
                     ZStack{
                         RoundedRectangle(cornerRadius:10)
                             .foregroundStyle(.tertiary)
-                            .frame(width: 120, height: 50)
-                            .offset(x: -22)
-                        ColorPicker("Choose Color", selection: $textColor)
-                            .frame(width: 150 , height: 75)
-                            .bold()
+                            .frame(width: 150, height: 50)
+                          
+                        ColorPicker("  Choose Color", selection: $textColor)
+                            .frame(width: 150 , height: 50)
+                            
                             .foregroundStyle(textColor)
                     }
                 }
                 .padding()
                 ZStack{
-                    RoundedRectangle(cornerRadius: 20)
+                    RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(tbColor)
-                        .frame(width: 300, height: 50)
-                        .offset(y:-10)
+                        .frame(width: 150 ,height: 50)
                     
-                    Text("Text Box Color")
-                        .bold()
+                    
+                    Text("Text Box")
+                        
                         .foregroundStyle(textColor)
                         .font(.title)
                       
-                        .offset(y:-10)
+                       
                 }
                 ZStack{
-                    RoundedRectangle(cornerRadius: 20)
+                    RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(tbColor)
-                        .frame(width: 200, height: 75)
+                        .frame(width: 150 ,height: 50)
                     ZStack{
                         RoundedRectangle(cornerRadius:10)
                             .foregroundStyle(.tertiary)
-                            .frame(width: 120, height: 50)
-                            .offset(x: -22)
-                        ColorPicker("Choose Color", selection: $tbColor)
-                            .frame(width: 150 , height: 75)
-                            .bold()
+                            .frame(width: 150 ,height: 50)
+                            
+                        ColorPicker("  Choose Color", selection: $tbColor)
+                            .frame(width: 150 , height: 50)
+                           
                             .foregroundStyle(textColor)
                     }
                 }
